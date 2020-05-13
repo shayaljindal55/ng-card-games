@@ -32,9 +32,28 @@ export class CountdownComponent implements OnInit {
   timeLeft = this.TIME_LIMIT;
   timerInterval = null;
   remainingPathColor = this.COLOR_CODES.info.color;
-
+  isTimerRunning = false;
   ngOnInit() {
+    // this.startTimer();
+  }
+
+  restartTimer() {
+    this.TIME_LIMIT = 60;
+    this.timePassed = 0;
+    this.timeLeft = this.TIME_LIMIT;
+    this.timerInterval = null;
+    this.onTimesUp();
     this.startTimer();
+   // this.isTimerRunning = false;
+  }
+
+  triggerTimer() {
+    this.startTimer();
+    this.isTimerRunning = true;
+  }
+
+  pauseTimer() {
+    clearInterval(this.timerInterval);
   }
 
   startTimer() {
