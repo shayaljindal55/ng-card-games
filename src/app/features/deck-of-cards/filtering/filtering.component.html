@@ -77,7 +77,8 @@
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color='primary' (click)="cardService.draw(cardService.numberOfCards)">Draw</button>
+    <button mat-raised-button color='primary' 
+    (click)="cardService.draw(cardService.numberOfCards)">Draw</button>
     <button mat-raised-button (click)="cardService.initialize()">Shuffle</button>
   </mat-card-actions>
 </mat-card>

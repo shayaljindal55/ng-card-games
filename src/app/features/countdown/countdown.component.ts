@@ -44,7 +44,7 @@ export class CountdownComponent implements OnInit {
     this.timerInterval = null;
     this.onTimesUp();
     this.startTimer();
-   // this.isTimerRunning = false;
+    // this.isTimerRunning = false;
   }
 
   triggerTimer() {
@@ -88,21 +88,20 @@ export class CountdownComponent implements OnInit {
   }
 
   setRemainingPathColor(time_Left) {
+    const elementClass =  document
+    .getElementById('base-timer-path-remaining')
+    .classList;
     const { alert, warning, info } = this.COLOR_CODES;
     if (time_Left <= alert.threshold) {
-      document
-        .getElementById('base-timer-path-remaining')
-        .classList.remove(warning.color);
-      document
-        .getElementById('base-timer-path-remaining')
-        .classList.add(alert.color);
+      elementClass.remove(warning.color);
+      elementClass.add(alert.color);
     } else if (time_Left <= warning.threshold) {
-      document
-        .getElementById('base-timer-path-remaining')
-        .classList.remove(info.color);
-      document
-        .getElementById('base-timer-path-remaining')
-        .classList.add(warning.color);
+      elementClass.remove(info.color);
+      elementClass.add(warning.color);
+    } else {
+      elementClass.remove(alert.color);
+      elementClass.remove(warning.color);
+      elementClass.add(info.color);
     }
   }
 

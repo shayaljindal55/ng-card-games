@@ -1,0 +1,9 @@
+<mat-card [ngClass]="cardService.cards.length > 0 ? 'wh-deck' : ''">
+  <mat-card-content>
+    <div fxLayout='row wrap' fxLayoutGap="10px" class='card-layout' [@cardAnimation]="cardService.cards.length">
+      <div *ngFor="let card of cardService.cards" fxFlex="90px">
+        <app-card-block [card]='card'></app-card-block>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

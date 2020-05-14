@@ -10,6 +10,8 @@ import { ClockCardComponent } from './games/clock-card/clock-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShowCardsComponent } from './games/show-cards/show-cards.component';
 import { CountdownComponent } from './features/countdown/countdown.component';
+import { CardClockComponent } from './features/card-clock/card-clock.component';
+import { DrawCardsService } from './features/deck-of-cards/draw-card.service';
 
 @NgModule({
   imports: [
@@ -23,9 +25,10 @@ import { CountdownComponent } from './features/countdown/countdown.component';
     AppComponent,
     ClockCardComponent,
     ShowCardsComponent,
-    CountdownComponent
+    CountdownComponent,
+    CardClockComponent
   ],
-  providers: [DeckOfCardsService],
+  providers: [DeckOfCardsService, DrawCardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
