@@ -1,4 +1,4 @@
-<mat-card [ngClass]="cardService.cards.length > 0 ? 'wh-deck' : ''">
+<mat-card [ngClass]="cardService.cards.length > 0 ? 'wh-deck' : ''" *ngIf="cardService.cards.length > 0">
   <mat-card-content>
     <div fxLayout='row wrap' fxLayoutGap="10px" class='card-layout' [@cardAnimation]="cardService.cards.length">
       <div *ngFor="let card of cardService.cards" fxFlex="90px">

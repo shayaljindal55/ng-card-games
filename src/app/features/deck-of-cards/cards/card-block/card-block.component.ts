@@ -34,4 +34,8 @@ export class CardBlockComponent implements OnInit {
       document.querySelector('.card-name').classList.remove('double-digit-card');
     }
   }
+
+  addClassToMove() {
+    document.querySelector('.card').classList.add('card-move');
+  }
 }
