@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClockCardComponent } from './games/clock-card/clock-card.component';
 import { ShowCardsComponent } from './games/show-cards/show-cards.component';
+import { CssDesignsComponent } from './features/css-designs/css-designs.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
         path: 'show-cards',
         component: ShowCardsComponent,
+    },
+    {
+        path: 'css-patterns',
+        component: CssDesignsComponent,
     }
 ];
 

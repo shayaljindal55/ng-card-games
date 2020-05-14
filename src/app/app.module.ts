@@ -12,6 +12,7 @@ import { ShowCardsComponent } from './games/show-cards/show-cards.component';
 import { CountdownComponent } from './features/countdown/countdown.component';
 import { CardClockComponent } from './features/card-clock/card-clock.component';
 import { DrawCardsService } from './features/deck-of-cards/draw-card.service';
+import { CssDesignsComponent } from './features/css-designs/css-designs.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { DrawCardsService } from './features/deck-of-cards/draw-card.service';
     ClockCardComponent,
     ShowCardsComponent,
     CountdownComponent,
-    CardClockComponent
+    CardClockComponent,
+    CssDesignsComponent
   ],
   providers: [DeckOfCardsService, DrawCardsService],
   bootstrap: [AppComponent]
